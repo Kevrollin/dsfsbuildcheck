@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from "react-router-dom";
 import AuthFooter from "./components/AuthFooter";
 import Footer from "./components/Footer";
@@ -10,26 +9,16 @@ import Dashboard from "./pages/Dashboard";
 import Projects from "./pages/Projects";
 import Donations from "./pages/Donations";
 import Profile from "./pages/Profile";
-
-
 import DashboardD from "./pages/DashboardD";
-import DonorNavBar from "./components/DonorNavBar";
 import Donate from "./pages/Donate";
 import ExploreStudents from "./pages/ExploreStudents";
 import DonorProfile from "./pages/DonorProfile";
 import About from "./pages/About";
-import StudentSignUp from "./pages/StudentSignUp";
-import StudentLogin from "./pages/StudentLogin";
-import DonorSignUp from "./pages/DonorSignUp";
-import DonorLogin from "./pages/DonorLogin";
 import RoleSelectionLanding from "./pages/RoleSelectionLanding";
 import Loader from "./components/Loader";
 import { LoaderProvider, useLoader } from "./context/LoaderContext";
 
-function PrivateRoute({ children }: { children: React.ReactNode }) {
-  const { isAuthenticated } = useAuth();
-  return isAuthenticated ? children : <Navigate to="/login" replace />;
-}
+// Removed unused: DonorNavBar, StudentSignUp, StudentLogin, DonorSignUp, DonorLogin, PrivateRoute
 
 function App() {
   return (
@@ -42,7 +31,7 @@ function App() {
           </Router>
         </LoaderProvider>
       </ThemeProvider>
- </AuthProvider>
+    </AuthProvider>
   );
 }
 
@@ -72,7 +61,7 @@ function AppContent() {
               {/* Start at role selection */}
               <Route path="/role-selection" element={<RoleSelectionLanding />} />
 
-              {/* Comment out all authentication routes */}
+              {/* Commented out all authentication routes */}
               {/* <Route path="/login" element={<RoleSelectionLanding />} /> */}
               {/* <Route path="/student-signup" element={<StudentSignUp />} /> */}
               {/* <Route path="/student-login" element={<StudentLogin />} /> */}
@@ -88,7 +77,7 @@ function AppContent() {
               <Route path="/students" element={<ExploreStudents />} />
               <Route path="/profile-d" element={<DonorProfile />} />
 
-              {/* Student/Private Routes - remove PrivateRoute for bypass */}
+              {/* Student/Private Routes - no PrivateRoute */}
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/profile" element={<Profile />} />
