@@ -175,17 +175,6 @@ const RoleSelectionLanding: React.FC = () => {
 						</motion.button>
 					)}
 				</AnimatePresence>
-				{/* Developer Navigation Instructions */}
-				<div className="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded shadow text-yellow-900 max-w-xl mx-auto">
-					<strong>Developer Note:</strong>
-					<p>
-						To access any page directly, type the route in your browser’s address bar.
-						<br />
-						For example: <code>/dashboard</code> for the student dashboard,{" "}
-						<code>/dashboard-d</code> for the donor dashboard,{" "}
-						<code>/donate</code> to access the donation page, etc.
-					</p>
-				</div>
 			</div>
 		</div>
 	);

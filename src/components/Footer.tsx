@@ -21,13 +21,20 @@ const Footer: React.FC = () => {
                 Decentralized Students Funding System powered by Stellar blockchain technology.
               </p>
               <div className="space-y-2">
-                <Button 
-                  variant="outline" 
+                <Button
+                  asChild
+                  variant="outline"
                   className="text-sm w-full justify-between group"
                   size="sm"
                 >
-                  Learn about Stellar
-                  <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <a
+                    href="https://developers.stellar.org/docs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Learn about Stellar
+                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
               </div>
             </div>
