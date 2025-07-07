@@ -205,14 +205,6 @@ const mockProjects: Project[] = [
   }
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.08 }
-  }
-};
-
 const ProjectsPage = () => {
   const { showLoader, hideLoader } = useLoader();
   const [allProjects, setAllProjects] = useState<Project[]>(mockProjects);

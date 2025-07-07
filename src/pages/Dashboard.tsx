@@ -14,7 +14,6 @@ export default function Index() {
   const { user } = useAuth();
   const { showLoader, hideLoader } = useLoader();
 
-  const [publicKey, setPublicKey] = useState<string | null>(null);
   const [balance, setBalance] = useState<string>('0');
   const [copied, setCopied] = useState(false);
 
